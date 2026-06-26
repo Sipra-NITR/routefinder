@@ -271,9 +271,7 @@ async function findRoute(){
 
     try{
 
-        const response = await fetch(
-        `http://localhost:8080/route?source=${source}&destination=${destination}`
-        );
+        const response = await fetch(`/route?source=${source}&destination=${destination}`);
 
         const data = await response.json();
 
