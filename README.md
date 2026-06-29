@@ -1,116 +1,177 @@
-# 🚗 RouteIQ Pro
+# 🚀 RouteIQ Pro - Smart Route Optimization System
 
-## 📖 Overview
-
-RouteIQ Pro is a graph-based smart route optimization system that finds the shortest path between cities using **Dijkstra’s Algorithm**.
-It integrates **Java, Spring Boot, MySQL, and a modern frontend UI** to simulate a real-world navigation system.
+RouteIQ Pro is a full-stack web application that finds the shortest path between cities using **Dijkstra's Algorithm**. It provides an interactive interface where users can select source and destination cities and instantly receive the optimal route, total distance, and execution time.
 
 ---
 
-## ✨ Features
+## 🌟 Features
 
-* 🔍 Find shortest route between cities
-* 📍 Graph-based path optimization
-* ⚡ Dijkstra’s Algorithm implementation
-* 🗺️ Real-time route display (Frontend UI)
-* 🕒 Execution time analysis
-* 📜 Recent search history
-* 🌐 REST API backend using Spring Boot
-* 🗄️ MySQL database integration
-* 🎨 Modern responsive UI
+* 🔍 Find the shortest route between two cities
+* ⚡ Dijkstra's Algorithm implementation for efficient path finding
+* 🗺️ Dynamic road network stored in MySQL database
+* 📊 Displays:
+
+  * Shortest path
+  * Total distance
+  * Execution time
+* 🌙 Modern responsive UI with Dark/Light mode
+* ☁️ Backend deployed on Render
+* 🗄️ Railway MySQL Database integration
 
 ---
 
-## 🧠 Tech Stack
+## 🛠️ Tech Stack
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+* Font Awesome
 
 ### Backend
 
 * Java
 * Spring Boot
+* Spring MVC
 * Spring Data JPA
-* REST APIs
+* Hibernate
 
 ### Database
 
-* MySQL
+* MySQL (Railway)
 
-### Frontend
+### Deployment
 
-* HTML
-* CSS
-* JavaScript
+* Render
+* Railway
 
 ---
 
-## 🧮 Algorithm Used
+## 📂 Project Structure
 
-### Dijkstra’s Algorithm
+```
+routefinder/
+│
+├── src/main/java/
+│   ├── controller/
+│   ├── graph/
+│   ├── model/
+│   ├── repository/
+│   ├── service/
+│   └── RoutefinderApplication.java
+│
+├── src/main/resources/
+│   ├── static/
+│   │   ├── index.html
+│   │   ├── style.css
+│   │   └── script.js
+│   └── application.properties
+│
+└── pom.xml
+```
 
-Used to compute the shortest path in a weighted graph.
+---
 
-Time Complexity:
-O((V + E) log V)
+## ⚙️ Algorithm Used
+
+The project uses **Dijkstra's Algorithm**, a greedy graph algorithm that computes the shortest path from a source node to every other node in a weighted graph.
+
+### Time Complexity
+
+* **Using Priority Queue:** `O((V + E) log V)`
 
 Where:
 
-* V = number of cities (nodes)
-* E = number of roads (edges)
+* `V` = Number of cities
+* `E` = Number of roads
 
 ---
 
-## 📡 API Endpoints
+## 📡 REST API
 
-| Method | Endpoint | Description       |
-| ------ | -------- | ----------------- |
-| GET    | /route   | Get shortest path |
-| GET    | /cities  | Fetch all cities  |
-| POST   | /city    | Add new city      |
-| POST   | /road    | Add new road      |
+### Find Shortest Route
 
+```
+GET /route
+```
+
+### Example
+
+```
+/route?source=Delhi&destination=Mumbai
+```
+
+### Sample Response
+
+```json
+{
+    "distance": 1450,
+    "path": [
+        "Delhi",
+        "Jaipur",
+        "Ahmedabad",
+        "Mumbai"
+    ],
+    "executionTime": 3
+}
+```
 
 ---
 
-## 🚀 How to Run the Project
+## 🚀 Running Locally
 
-### Backend (Spring Boot)
+### Clone the repository
 
 ```bash
-mvn spring-boot:run
+git clone https://github.com/your-username/routefinder.git
 ```
 
-Runs on:
+### Navigate to the project
 
+```bash
+cd routefinder
 ```
-http://localhost:8080
+
+### Configure Database
+
+Update `application.properties` with your MySQL credentials.
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/railway
+spring.datasource.username=root
+spring.datasource.password=your_password
 ```
 
----
-
-### Frontend
+### Run the application
 
 Open:
 
-```
-index.html
-```
+https://routefinder-backend-j8te.onrender.com
 
 ---
 
-## 🎯 Future Improvements
+## 🎯 Future Enhancements
 
-* 🌍 Map integration (Google Maps)
-* 🚦 Traffic-aware routing
-* 🔄 Multiple route suggestions
-* 📊 Route analytics dashboard
-* 📱 Mobile app version
+* Multiple routing algorithms (A*, Bellman-Ford)
+* Google Maps integration
+* Interactive map visualization
+* Traffic-aware routing
+* User authentication
+* Save favorite routes
+* Admin dashboard for road management
 
 ---
 
-## 🏁 Conclusion
+## 👩‍💻 Author
 
-RouteIQ Pro demonstrates strong understanding of:
+**Sipra Sworupa Mishra**
 
-* Data Structures & Algorithms
-* Backend Development
-* Database Design
-* Full-stack integration
+GitHub: https://github.com/Sipra-NITR
+
+---
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
