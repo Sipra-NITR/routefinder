@@ -124,7 +124,7 @@ GET /route
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/routefinder.git
+git clone https://github.com/Sipra-NITR/routefinder.git
 ```
 
 ### Navigate to the project
