@@ -16,7 +16,7 @@ public class Main {
             Connection con = DatabaseConnection.getConnection();
 
             String query =
-                    "SELECT source, destination, distance FROM roads";
+                    "SELECT source, destination, distance FROM Roads";
 
             Statement st = con.createStatement();
 

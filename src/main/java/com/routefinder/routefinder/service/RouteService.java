@@ -1,4 +1,6 @@
+
 package com.routefinder.routefinder.service;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.routefinder.routefinder.graph.*;
 import com.routefinder.routefinder.model.*;
@@ -13,20 +15,36 @@ public class RouteService {
     @Autowired
     private RoadRepository roadRepository;
 
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
     public RouteResponse findRoute(
             String source,
             String destination) {
+                System.out.println("Database: " +
+        jdbcTemplate.queryForObject("SELECT DATABASE()", String.class));
 
+    System.out.println("Roads in DB: " +
+        jdbcTemplate.queryForObject("SELECT COUNT(*) FROM roads", Integer.class));
         Graph graph = new Graph();
 
-        for(Road road : roadRepository.findAll()) {
+        
+        System.out.println("Total Roads: " + roadRepository.count());
 
-            graph.addRoad(
-                    road.getSource(),
-                    road.getDestination(),
-                    road.getDistance()
-            );
-        }
+for (Road road : roadRepository.findAll()) {
+
+    System.out.println(
+        road.getSource() + " -> " +
+        road.getDestination() + " : " +
+        road.getDistance()
+    );
+
+    graph.addRoad(
+        road.getSource(),
+        road.getDestination(),
+        road.getDistance()
+    );
+}
 
         long start = System.currentTimeMillis();
 
