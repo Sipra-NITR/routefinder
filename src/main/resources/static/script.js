@@ -2,7 +2,7 @@
 let searchCount = 0;
 let historyList = [];
 
-const API_URL = "http://localhost:8081";
+const API_URL = "https://routefinder-backend.onrender.com";
 let map;
 let marker1;
 let marker2;
