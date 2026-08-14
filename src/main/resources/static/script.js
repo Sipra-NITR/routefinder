@@ -2,7 +2,7 @@
 let searchCount = 0;
 let historyList = [];
 
-const API_URL = "https://routefinder-deploy.onrender.com";
+const API_URL = "https://routefinder-backend-jt8e.onrender.com";
 let map;
 let marker1;
 let marker2;
