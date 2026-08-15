@@ -133,23 +133,24 @@ git clone https://github.com/Sipra-NITR/routefinder.git
 cd routefinder
 ```
 
-### Configure Database
-
-Update `application.properties` with your MySQL credentials.
-
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/railway
-spring.datasource.username=root
-spring.datasource.password=your_password
-```
-
 ### Run the application
 
 Open:
 
-https://routefinder-backend-j8te.onrender.com
-
+"http://localhost:8080";
 ---
+## 📸 Screenshots
+### Home Page
+
+![RouteIQ Home Page](RouteIQ/HomePage.png)
+
+### Route Result
+
+![Route Result](RouteIQ/RouteResult.png)
+
+### Map Visualization
+
+![Route Map](RouteIQ/MapVisualization.png)
 
 ## 🎯 Future Enhancements
 
