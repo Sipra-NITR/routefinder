@@ -2,7 +2,7 @@
 let searchCount = 0;
 let historyList = [];
 
-const API_URL = "https://routefinder-backend-j8te.onrender.com";
+const API_URL = "http://localhost:8080";
 let map;
 let marker1;
 let marker2;
@@ -59,12 +59,10 @@ async function findRoute(){
 
     try{
 
-        const response =
-        await fetch(
+        const response = await fetch(
+    `${API_URL}/route?source=${encodeURIComponent(source)}&destination=${encodeURIComponent(destination)}`
+);
 
-`${API_URL}/route?source=${encodeURIComponent(source)}&destination=${encodeURIComponent(destination)}`
-
-        );
 
         if(!response.ok){
 
