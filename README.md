@@ -141,16 +141,14 @@ Open:
 ---
 ## 📸 Screenshots
 ### Home Page
-
-![RouteIQ Home Page](RouteIQ/HomePage.png)
+<img width="1339" height="606" alt="image" src="https://github.com/user-attachments/assets/ce942058-1697-4821-ab01-659b9c00f86e" />
 
 ### Route Result
-
-![Route Result](RouteIQ/RouteResult.png)
+<img width="1267" height="575" alt="image" src="https://github.com/user-attachments/assets/46f3dcf4-8254-4cb7-a00f-411fb7f9a0f8" />
 
 ### Map Visualization
+<img width="850" height="425" alt="image" src="https://github.com/user-attachments/assets/09cdc45e-d604-473c-b98c-452aff05d08f" />
 
-![Route Map](RouteIQ/MapVisualization.png)
 
 ## 🎯 Future Enhancements
 
